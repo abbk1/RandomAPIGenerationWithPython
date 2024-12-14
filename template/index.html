@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'static/style.css' %}">
+</head>
+<body style="background-color: #FDFDFD;"">
+  <h1>Hello World</h1>
+  <img src={{image}} width="100" height="100" alt="Random Image">
+  <center>
+    <h2>Storing User Biodata into CSV File</h2>
+
+  <form method="post" action="">
+      {% csrf_token %}
+      <label for="name">Name:</label><br>
+      <input style="padding: 8px; width: 50%; border: 2px green solid;" type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input style="padding: 8px; width: 50%; border: 2px green solid;" type="email" id="email" name="email" required><br><br>
+
+      <label for="age">Age:</label><br>
+      <input style="padding: 8px; width: 50%; border: 2px green solid;" type="number" id="age" name="age" required><br><br>
+
+      <label for="address">Address:</label><br>
+      <textarea style="padding: 8px; width: 50%; border: 2px green solid;" id="address" name="address" rows="4" required></textarea><br><br>
+
+      <button style="width: 50%; border-radius: 50px; padding: 10px; text-align: center; font-size: 18px; background-color: green; color:white;" type="submit">Submit</button>
+  </form>
+    </center>
+</body>
+</html>
